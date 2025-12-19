@@ -1,6 +1,7 @@
-#User Registration
+# User Registration
 
-##TC-REG-01: Create Account with Valid Data
+
+## TC-REG-01: Create Account with Valid Data
 
 **Preconditions:**
 User is not logged in.
@@ -19,8 +20,7 @@ The registration page is accessible.
 - Account is created successfully.
 - User is automatically redirected to the homepage or account dashboard.
 
-
-##TC-REG-02: Validate Required Fields on Empty Registration Form
+## TC-REG-02: Validate Required Fields on Empty Registration Form
 
 **Steps:**
 1. Open the Registration page.
@@ -31,8 +31,7 @@ The registration page is accessible.
 - Error messages are displayed for all required fields.
 - User remains on the Registration page.
 
-
-##TC-REG-03: Validate First Name Field – Invalid Characters
+## TC-REG-03: Validate First Name Field – Invalid Characters
 
 **Preconditions:**
 The registration page is open.
@@ -46,8 +45,7 @@ The registration page is open.
 - Validation message appears indicating invalid characters.
 - Registration is not completed.
 
-
-##TC-REG-04: Validate Last Name Field – Below Minimum Length
+## TC-REG-04: Validate Last Name Field – Below Minimum Length
 
 **Preconditions:**
 The registration page is open.
@@ -61,8 +59,7 @@ The registration page is open.
 - Validation message indicates the minimum length requirement.
 - Registration is not completed.
 
-
-##TC-REG-05: Validate Duplicate Email Error
+## TC-REG-05: Validate Duplicate Email Error
 
 **Steps:**
 1. Open the Registration page.
@@ -75,8 +72,7 @@ The registration page is open.
 - Registration request is not submitted.
 - User remains on the Registration page.
 
-
-##TC-REG-06: Validate Password and Confirm Password Mismatch
+## TC-REG-06: Validate Password and Confirm Password Mismatch
 
 **Steps:**
 1. Open the Registration page.
@@ -90,10 +86,10 @@ The registration page is open.
 - Registration is not completed.
 
 
-#User Login
+# User Login
 
 
-##TC-LOGIN-01: Login with Valid Credentials
+## TC-LOGIN-07: Login with Valid Credentials
 
 **Steps:**
 1. Open the Login page.
@@ -104,9 +100,8 @@ The registration page is open.
 **Expected Result:**
 - User is logged in successfully.
 - User is redirected to the homepage or account dashboard.
-  
 
-##TC-LOGIN-02: Verify user is logged out after deleting authentication cookies
+## TC-LOGIN-08: Verify user is logged out after deleting authentication cookies
 
 **Preconditions:**
 User has a valid registered account.
@@ -125,8 +120,7 @@ Browser DevTools are available.
 - The user is logged out automatically.
 - The system redirects the user to the Login page or Homepage.
 
-
-##TC-LOGIN-02: Login with Invalid Email Format
+## TC-LOGIN-09: Login with Invalid Email Format
 
 **Steps:**
 1. Open the Login page.
@@ -135,11 +129,10 @@ Browser DevTools are available.
 4. Click the Login button.
 
 **Expected Result:**
-- Validation error message appears for invalid email format.
+- Validation error message appears for an invalid email format.
 - User remains on the Login page.
 
-
-##TC-LOGIN-03: Login with Incorrect Password
+## TC-LOGIN-10: Login with Incorrect Password
 
 **Steps:**
 1. Open the Login page.
@@ -152,10 +145,10 @@ Browser DevTools are available.
 - User remains on the Login page.
 
 
-#User Logout
+# User Logout
 
 
-##TC-LOGOUT-01: Logout from Application
+## TC-LOGOUT-11: Logout from Application
 
 **Steps:**
 1. Log in with a valid user account.
@@ -164,12 +157,12 @@ Browser DevTools are available.
 **Expected Result:**
 - User is logged out successfully.
 - User is redirected to the homepage or login page.
+  
+
+# Cross-Browser Testing
 
 
-#Cross-Browser Testing
-
-
-##TC-CB-01: Verify Registration Page in Different Browsers
+## TC-CB-12: Verify Registration Page in Different Browsers
 
 **Steps:**
 1. Open the Registration page in Chrome.
@@ -179,8 +172,7 @@ Browser DevTools are available.
 - Registration page loads correctly in both browsers.
 - All input fields, buttons, and validations behave consistently.
 
-
-##TC-CB-02: Verify Login Functionality Across Browsers
+## TC-CB-13: Verify Login Functionality Across Browsers
 
 **Steps:**
 1. Log in using valid credentials in Chrome.
@@ -191,10 +183,10 @@ Browser DevTools are available.
 - No UI or functional issues observed.
 
 
-#Accessibility (A11y) Test Cases
+# Accessibility (A11y) Test Cases
 
 
-##TC-A11Y-01: Keyboard Navigation on Registration Page
+## TC-A11Y-14: Keyboard Navigation on Registration Page
 
 **Steps:**
 1. Open the Registration page.
@@ -206,8 +198,7 @@ Browser DevTools are available.
 - Focus order is logical and visible.
 - Form can be submitted without using a mouse.
 
-
-##TC-A11Y-02: Screen Reader Labels for Registration Fields
+## TC-A11Y-15: Screen Reader Labels for Registration Fields
 
 **Steps:**
 1. Open the Registration page.
