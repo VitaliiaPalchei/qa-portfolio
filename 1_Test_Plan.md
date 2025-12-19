@@ -1,12 +1,12 @@
-#Agile QA Test Plan
+# Agile QA Test Plan
 
 
-##1. Purpose
+## 1. Purpose
 
 This test plan describes the QA approach for testing an e-commerce web application. 
 The goal is to ensure core functionality, usability, accessibility, API, and data integrity meet the defined requirements before release.
 
-##2. Scope of Testing
+## 2. Scope of Testing
 
 2.1 In Scope
 
@@ -22,7 +22,7 @@ Smoke, Sanity, and Regression Testing
 Performance and load testing
 Security and penetration testing
 
-##3. Test Strategy
+## 3. Test Strategy
 
 3.1 Agile Testing Approach
 
@@ -30,7 +30,7 @@ Testing performed within each sprint
 Test cases created from user stories and acceptance criteria
 Defects logged and re-tested during the same sprint when possible
 
-##4. Types of Testing
+## 4. Types of Testing
 
 4.1 Functional Manual Testing
 
@@ -61,13 +61,13 @@ Error handling and authorization
 CRUD operations validation
 Data consistency between UI, API, and database
 
-##5. Test Environment
+## 5. Test Environment
 
 QA/Staging environment
 Production-like configuration
 Test data prepared in advance
 
-##6. Test Tools
+## 6. Test Tools
 
 Test management: TestRail
 Defect tracking: Jira
@@ -76,7 +76,7 @@ Database testing: SQL (MySQL)
 Accessibility: VoiceOver, browser DevTools
 Cross-browser testing: Sauce Labs
 
-##7. Test Deliverables
+## 7. Test Deliverables
 
 Test plan
 Test cases and scenarios
@@ -84,7 +84,7 @@ Accessibility checklist
 API and SQL test cases
 Defect reports
 
-##8. Entry & Exit Criteria
+## 8. Entry & Exit Criteria
 
 Entry Criteria
 Requirements and acceptance criteria defined
@@ -94,38 +94,38 @@ All planned test cases executed
 No open Critical or High severity defects
 Accessibility and cross-browser checks completed
 
-##9. Defect Management
+## 9. Defect Management
 
 Defects logged in Jira
 Severity levels: Critical, High, Medium, Low
 Defects are re-tested after fixes
 
-##10. Test Schedule (Per Sprint)
+## 10. Test Schedule (Per Sprint)
 
 Test planning and design
 Test execution
 Regression testing
 Test summary
 
-##11. Roles & Responsibilities
+## 11. Roles & Responsibilities
 
 QA Engineer: Test design, execution, defect reporting
 Developers: Defect fixes
 Product Owner: Requirements validation
 
-##12. Risks & Mitigation
+## 12. Risks & Mitigation
 
 Requirement changes → early QA involvement
 Environment issues → communication and buffer time
 Limited test data → early preparation
 
-##13. Assumptions
+## 13. Assumptions
 
 Requirements are clear and stable
 API and database access available
 Supported browsers are predefined
 
-##14. Approval
+## 14. Approval
 
 Prepared by: QA Engineer
 Reviewed by: Portfolio Reviewer
