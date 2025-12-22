@@ -6,7 +6,7 @@
 **Steps:**
 1. Open the website homepage.
 2. Enter a valid keyword (e.g., book) in the search field.
-3. Submit the search.
+3. Click the search.
    
 **Expected Result:**
 - Search Results page loads successfully.
@@ -20,7 +20,7 @@
 
 **Steps:**
 1. Open the website homepage.
-2. Click any product category from the top navigation menu or side category list.
+2. Click any category from the top navigation menu or side category list.
    
 **Expected Result:**
 - The selected category page opens successfully.
@@ -31,7 +31,7 @@
 
 **Steps:**
 1. Open the website homepage.
-2. Navigate to any category page containing products.
+2. Click on any category page containing products.
    
 **Expected Result:**
 - Each product tile displays:
@@ -45,20 +45,19 @@
 
 **Steps:**
 1. Open the website homepage.
-2. Navigate to any category (e.g., Books).
+2. Open any category (e.g., Books).
 3. Click the Add to Cart button on a product tile.
    
 **Expected Result:**
 - Product is added to the cart
 - Confirmation message appears.
 - Cart icon updates the item count.
-- User remains on the category page.
 
 ## TC-PB-04: Sort Products by Price (Low to High)
 
 **Steps:**
 1. Open the website homepage.
-2. Navigate to any product category.
+2. Click on any product category from the navigation menu.
 3. Select Price: Low to High from the sorting dropdown.
    
 **Expected Result:**
@@ -68,7 +67,7 @@
 
 **Steps:**
 1. Open the website homepage.
-2. Navigate to a category (e.g., Apparel & Shoes).
+2. Click on any product category (e.g., Apparel & Shoes).
 3. Select Name: A–Z from the sorting dropdown.
    
 **Expected Result:**
@@ -82,7 +81,7 @@
 
 **Steps:**
 1. Open the website homepage.
-2. Navigate to any category.
+2. Select any product category.
 3. Click on a product image or product name.
    
 **Expected Result:**
@@ -107,10 +106,13 @@
 
 **Precondition:**
  Product is in stock.
+ The user is not required to be logged in (guest checkout supported).
  
 **Steps:**
-1. Open a product PDP.
-2. Click the Add to Cart button.
+1. Open the website homepage.
+2. Click on any product category from the main menu.
+3. Select an in-stock product by clicking on the product name or product image.
+4. Click the Add to Cart button.
    
 **Expected Result:**
 - Product is added to the cart.
@@ -122,7 +124,9 @@
 The product is out of stock.
 
 **Steps:**
-1. Open the product that is out of stock.
+1. Open the website homepage.
+2. Navigate to a product category that contains out-of-stock items.
+3. Select a product that is marked as out of stock.
    
 **Expected Result:**
 - The " Add to Cart” button is disabled or hidden.
@@ -131,14 +135,18 @@ The product is out of stock.
 ## TC-PDP-05: Email a Friend Functionality
 
 **Steps:**
-1. Open any product.
-2. Click Email a Friend.
-3. Enter valid email details.
-4. Submit the form.
+1. Open the website homepage.
+2. Open any product from the homepage.
+3. On the Product Details Page, click the Email a Friend button.
+4. Enter a valid email address in the Friend’s Email field.
+5. Enter a valid email address in the Your Email field.
+6. Enter a message in the Personal Message text area.
+7. Click the Send Email button.
    
 **Expected Result:**
 - The email form is submitted successfully.
-- Confirmation message is displayed.
+- A confirmation message is displayed indicating that the email has been sent.
+- No validation or system errors occur.
 
 
 # Wishlist Test Cases
@@ -147,8 +155,9 @@ The product is out of stock.
 ## TC-WL-01: Add Product to Wishlist
 
 **Steps:**
-1. Open any product.
-2. Click Add to Wishlist.
+1. Open the website homepage.
+2. Open any product.
+3. Click the 'Add to Wishlist' button.
    
 **Expected Result:**
 - Product added to the wishlist.
@@ -157,7 +166,7 @@ The product is out of stock.
 ## TC-WL-02: Remove Product from Wishlist
 
 **Precondition:** 
-Product exists in the wishlist.
+The product has already been added to your wishlist.
 
 **Steps:**
 1. Open the Wishlist page.
