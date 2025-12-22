@@ -7,6 +7,7 @@
 1. Open the website homepage.
 2. Enter a valid keyword (e.g., book) in the search field.
 3. Submit the search.
+   
 **Expected Result:**
 - Search Results page loads successfully.
 - Products matching the entered keyword are displayed.
@@ -20,6 +21,7 @@
 **Steps:**
 1. Open the website homepage.
 2. Click any product category from the top navigation menu or side category list.
+   
 **Expected Result:**
 - The selected category page opens successfully.
 - A list of products is displayed.
@@ -30,6 +32,7 @@
 **Steps:**
 1. Open the website homepage.
 2. Navigate to any category page containing products.
+   
 **Expected Result:**
 - Each product tile displays:
              Product image
@@ -44,6 +47,7 @@
 1. Open the website homepage.
 2. Navigate to any category (e.g., Books).
 3. Click the Add to Cart button on a product tile.
+   
 **Expected Result:**
 - Product is added to the cart
 - Confirmation message appears.
@@ -56,6 +60,7 @@
 1. Open the website homepage.
 2. Navigate to any product category.
 3. Select Price: Low to High from the sorting dropdown.
+   
 **Expected Result:**
 - Products are reordered from lowest price to highest price.
 
@@ -65,6 +70,7 @@
 1. Open the website homepage.
 2. Navigate to a category (e.g., Apparel & Shoes).
 3. Select Name: A–Z from the sorting dropdown.
+   
 **Expected Result:**
 - Products are sorted alphabetically by product name.
 
@@ -77,6 +83,7 @@
 1. Open the website homepage.
 2. Navigate to any category.
 3. Click on a product image or product name.
+   
 **Expected Result:**
 - The Product Details Page loads without errors.
 - The correct product page is displayed.
@@ -89,6 +96,7 @@
 1. Open the Product Details Page.
 2. Select a different size (if available).
 3. Select a different color (if available).
+   
 **Expected Result:**
 - Selected attributes are applied correctly.
 - No validation errors appear.
@@ -100,6 +108,7 @@
 **Steps:**
 1. Open a product PDP.
 2. Click the Add to Cart button.
+   
 **Expected Result:**
 - Product is added to the cart.
 - Confirmation message appears at the top of the page.
@@ -110,6 +119,7 @@
 The product is out of stock.
 **Steps:**
 1. Open the product that is out of stock.
+   
 **Expected Result:**
 - The " Add to Cart” button is disabled or hidden.
 - “Out of stock” message is displayed.
@@ -121,6 +131,7 @@ The product is out of stock.
 2. Click Email a Friend.
 3. Enter valid email details.
 4. Submit the form.
+   
 **Expected Result:**
 - The email form is submitted successfully.
 - Confirmation message is displayed.
@@ -134,6 +145,7 @@ The product is out of stock.
 **Steps:**
 1. Open any product.
 2. Click Add to Wishlist.
+   
 **Expected Result:**
 - Product added to the wishlist.
 - Confirmation message is displayed.
@@ -145,6 +157,7 @@ Product exists in the wishlist.
 **Steps:**
 1. Open the Wishlist page.
 2. Remove a product from the wishlist.
+   
 **Expected Result:**
 - Product is removed successfully.
 - Wishlist updates accordingly.
@@ -156,6 +169,7 @@ Product exists in the wishlist.
 **Steps:**
 1. Open the Wishlist page.
 2. Click Add to Cart for a product.
+   
 **Expected Result:**
 - Product is added to the cart.
 - Cart icon updates item count.
