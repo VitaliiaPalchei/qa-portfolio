@@ -56,7 +56,7 @@ The registration page is open.
 3. Click the Register button.
 
 **Expected Result:**
-Validation message indicates the minimum length requirement.
+The validation message indicates the minimum length requirement.
 Registration is not completed.
 
 ## TC-REG-05: Validate Duplicate Email Error
@@ -76,9 +76,9 @@ Registration is not completed.
 
 **Steps:**
 1. Open the Registration page.
-2. Enter valid data in all required fields.
-3. Enter Test123! in the Password field.
-4. Enter Test12! in the Confirm Password field.
+2. Enter a valid password in the Password field.
+3. Enter an invalid password in the Confirm Password field.
+4. Enter valid data in all required fields.
 5. Click the Register button.
    
 **Expected Result:**
@@ -122,16 +122,16 @@ Browser DevTools are available.
 - The user is logged out automatically.
 - The system redirects the user to the Login page or Homepage.
 
-## TC-LOGIN-02: Login with Invalid Email Format
+## TC-LOGIN-02: Login with Unregistered Email
 
 **Steps:**
 1. Open the Login page.
-2. Enter an invalid email format (e.g., user@@test).
-3. Enter any password.
+2. Enter an unregistered email address.
+3. Enter a valid password.
 4. Click the Login button.
    
 **Expected Result:**
-- Validation error message appears for an invalid email format.
+- An error message is displayed (e.g., “Incorrect email or password.”).
 - User remains on the Login page.
   
 ## TC-LOGIN-03: Login with Incorrect Password
