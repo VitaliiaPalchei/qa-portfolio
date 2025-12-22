@@ -79,6 +79,7 @@
 
 
 ## TC-PDP-01: Verify Product Details Page Loads Successfully
+
 **Steps:**
 1. Open the website homepage.
 2. Navigate to any category.
@@ -92,6 +93,7 @@
 
 **Preconditions:**
 - The product has selectable attributes (e.g., size, color).
+  
 **Steps:**
 1. Open the Product Details Page.
 2. Select a different size (if available).
@@ -105,6 +107,7 @@
 
 **Precondition:**
  Product is in stock.
+ 
 **Steps:**
 1. Open a product PDP.
 2. Click the Add to Cart button.
@@ -117,6 +120,7 @@
 
 **Precondition:**
 The product is out of stock.
+
 **Steps:**
 1. Open the product that is out of stock.
    
@@ -154,6 +158,7 @@ The product is out of stock.
 
 **Precondition:** 
 Product exists in the wishlist.
+
 **Steps:**
 1. Open the Wishlist page.
 2. Remove a product from the wishlist.
@@ -166,6 +171,7 @@ Product exists in the wishlist.
 
 **Precondition:**
  Product exists in the wishlist.
+ 
 **Steps:**
 1. Open the Wishlist page.
 2. Click Add to Cart for a product.
