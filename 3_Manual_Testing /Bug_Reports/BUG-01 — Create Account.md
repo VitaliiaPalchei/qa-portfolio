@@ -1,8 +1,11 @@
 ## Title: Registration allows invalid email format
 
 **Environment:**
+
 Browser: Chrome
+
 OS: macOS
+
 Build: Web Shop Test Environment
 
 **Preconditions:**
