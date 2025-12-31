@@ -7,7 +7,9 @@
 ## TC-API-REG-01 Register user – success
 
 **Endpoint:** POST /users/add
+
 **Priority:** High
+
 **Preconditions:** User email does not exist, Postman environment set up
 
 **Test Data:**
@@ -34,7 +36,9 @@
 ## TC-API-REG-02 Register user – existing email (negative)
 
 **Endpoint:** POST /users/add
+
 **Priority:** High
+
 **Preconditions:** User with email existinguser@example.com exists
 
 **Test Data:**
@@ -59,6 +63,7 @@
 ## TC-API-LOGIN-03 Login – valid credentials
 
 **Endpoint:** POST /auth/login
+
 **Priority:** High
 
 **Test Data:**
@@ -81,6 +86,7 @@
 ## TC-API-LOGIN-04 Login – invalid password (negative)
 
 **Endpoint:** POST /auth/login
+
 **Priority:** High
 
 **Test Data:**
@@ -105,6 +111,7 @@
 ## TC- API-PRODUCTS-05 Get product list – success
 
 **Endpoint:** GET /products
+
 **Priority:** Medium
 
 **Steps:**
@@ -121,6 +128,7 @@
 ## TC-API-PRODUCTS-06 Get product details – invalid ID (negative)
 
 **Endpoint:** GET /products/{id}
+
 **Priority:** Medium
 
 **Steps:**
@@ -136,6 +144,7 @@
 ## TC-API-PRODUCTS-07 Search products – positive
 
 **Endpoint:** GET /products/search?q=phone
+
 **Priority:** Medium
 
 **Steps:**
@@ -152,6 +161,7 @@
 ## TC-API-PRODUCTS-08 Search products – invalid query(negative)
 
 **Endpoint:** GET /products/search?q=123@@@
+
 **Priority:** Low
 
 **Steps:**
@@ -171,7 +181,9 @@
 ## TC-API-CART-09 Add to cart – success
 
 **Endpoint:** POST /carts/add
+
 **Priority:** High
+
 **Preconditions:** Valid user ID and product ID exist
 
 **Steps:**
@@ -199,6 +211,7 @@
 ## TC-API-CART-10 Add to cart – invalid product (negative)
 
 **Endpoint:** POST /carts/add
+
 **Priority:** High
 
 **Steps:**
@@ -226,7 +239,9 @@ https://dummyjson.com/carts/add
 ## TC-API-CART-11 Delete from cart – success
 
 **Endpoint:** DELETE /carts/{cartId}
+
 **Priority:** Medium
+
 **Precondition:** Cart exists (created via add-to-cart)
 
 **Steps:**
@@ -243,6 +258,7 @@ https://dummyjson.com/carts/add
 ## TC-API-CART-12 Delete from cart – invalid ID (negative)
 
 **Endpoint:** DELETE /carts/99999
+
 **Priority:** Medium
 
 **Steps:**
@@ -260,6 +276,7 @@ https://dummyjson.com/carts/add
 ## TC-API-AUTH-13 Access user profile without authorization token
 
 **Endpoint:** GET /auth/me
+
 **Priority:** High
 
 **Steps:**
@@ -276,7 +293,9 @@ https://dummyjson.com/carts/add
 ## TC- API-AUTH-14 Access profile – valid token
 
 **Endpoint:** GET /auth/me
+
 **Priority:** High
+
 **Preconditions:**
 User is successfully logged in
 Valid authentication token is saved in Postman environment as {{auth_token}}
