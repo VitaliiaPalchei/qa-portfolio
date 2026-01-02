@@ -32,7 +32,7 @@ The goal is to highlight my ability to write test cases, execute tests, report b
     - Accessibility
   * [Screenshots](3_Manual_Testing/Screenshots/)
   * [Bug Reports](3_Manual_Testing/Bug_Reports/)
-  * [TestRail Screenshots](3_Manual_Testing/TestRail/)
+  * [TestRail Screenshots](3_Manual_Testing/Screenshots/)
 * [API Testing](4_API_Testing/) – API endpoints tested with JSON requests/responses
   * Postman collections and screenshots included
 * [SQL Testing](5_SQL_Testing/) – SQL queries executed and verified against expected results
