@@ -18,8 +18,8 @@ The goal is to highlight my ability to write test cases, execute tests, report b
 
 ## Project Structure
 
-* [Test Plan](5_SQL_Testing/1_Test_Plan.md) – Testing strategy and approach
-* [Acceptance Criteria](5_SQL_Testing/2_Acceptance_Criteria.md) – Requirements mapped for QA verification
+* [Test Plan](1_Test_Plan.md) – Testing strategy and approach
+* [Acceptance Criteria](2_Acceptance_Criteria.md) – Requirements mapped for QA verification
 * [Manual Testing](3_Manual_Testing/) – Test cases and bug reports
   * [Test Cases](3_Manual_Testing/Test_Cases/) – User Registration, Login, Product Browsing, PDP, Cart, Wishlist, Cross-browser, Accessibility
   * [Bug Reports](3_Manual_Testing/Bug_Reports/) – Documented defects found during testing
