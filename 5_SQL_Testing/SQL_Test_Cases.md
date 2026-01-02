@@ -12,16 +12,15 @@
 * password_hash: `hashedpassword123`
 
 **Steps:**
-1. Open SQL DBeaver/MySQL.
-2. Connect to the database.
-3. Select the project database.
-4. Insert a new user:
+1. Open DBeaver and connect to the MySQL database.
+2. Select the project database.
+3. Insert a new user:
 
    ```sql
    INSERT INTO users (full_name, email, password_hash)
    VALUES ('John Mare', 'john.mar.tc01@example.com', 'hashedpassword123');
    ```
-5. Retrieve the inserted user:
+4. Retrieve the inserted user:
 
    ```sql
    SELECT * FROM users
@@ -56,7 +55,7 @@
 * full_name, email, and password_hash match inserted data
 
 
-### **TC_USERS_03 — UPDATE: Update User Password**
+### **TC_USERS_03 - UPDATE: Update User Password**
 
 **Priority:** High
 
@@ -114,38 +113,10 @@
 * No new user is created
 
 
-### **TC_USERS_05 — DELETE: Remove Test User**
-
-**Priority:** High
-
-**Preconditions:**
-* User exists
-
-**Steps:**
-
-1. Connect to database.
-2. Delete user:
-
-   ```sql
-   DELETE FROM users
-   WHERE email = 'john.mar.tc01@example.com';
-   ```
-3. Verify deletion:
-
-   ```sql
-   SELECT * FROM users
-   WHERE email = 'john.mar.tc01@example.com';
-   ```
-
-**Expected Result:**
-* 1 row deleted
-* SELECT returns 0 rows
-
-
 ## 📦 PRODUCTS TABLE
 
 
-### **TC_PROD_06 — CREATE: Add New Product**
+### **TC_PROD_05 — CREATE: Add New Product**
 
 **Priority:** High
 
@@ -177,7 +148,7 @@
 * created_at populated automatically
 
 
-### **TC_PROD_07 — READ: Retrieve Product by ID**
+### **TC_PROD_06 — READ: Retrieve Product by ID**
 
 **Preconditions:**
 * Product exists
@@ -196,7 +167,7 @@
 * All fields match the inserted data
 
 
-### **TC_PROD_08 — UPDATE: Update Product Price**
+### **TC_PROD_07 — UPDATE: Update Product Price**
 
 **Preconditions:**
 * Product exists
@@ -224,33 +195,7 @@
 * Exactly 1 row affected
 
 
-### **TC_PROD_09 — DELETE: Delete Product**
-
-**Preconditions:**
-* Product exists in the products table
-
-**Steps:**
-
-1. Delete product:
-
-   ```sql
-   DELETE FROM products
-   WHERE product_id = <product_id>;
-   ```
-2. Verify deletion:
-
-   ```sql
-   SELECT * FROM products
-   WHERE product_id = <product_id>;
-   ```
-
-**Expected Result:**
-
-* Product removed
-* SELECT returns 0 rows
-
-
-### **TC_PROD_10 — NEGATIVE: Insert Product with Invalid Price**
+### **TC_PROD_08 — NEGATIVE: Insert Product with Invalid Price**
  
 **Priority:** High  
 
@@ -294,14 +239,14 @@
 **Expected Result**
 
 * The INSERT operation **fails**
-* Database returns a data type error (e.g., *Incorrect decimal value*)
+* Database returns a data type validation error (e.g., Incorrect decimal value)
 * No record with `product_name = 'Invalid Product'` is inserted into the table
 
 
 ## 🧾 ORDERS & ORDER_ITEMS
 
 
-### **TC_ORD_11 — CREATE: Create Order with Items**
+### **TC_ORD_09 - CREATE: Create Order with Items**
 
 **Preconditions:**
 * User exists (`user_id = 1`)
@@ -331,12 +276,12 @@
 
 **Expected Result:**
 
-* Order created
+* order_id is auto-generated
 * Items linked correctly
 * No errors
 
 
-### **TC_ORD_12 — READ: Verify Order Items & Total**
+### **TC_ORD_10 — READ: Verify Order Items & Total**
 
 **Steps:**
 
@@ -364,37 +309,7 @@
 * Calculated total matches `total_amount`
 
 
-### **TC_ORD_13 — DELETE: Delete Order**
-
-**Preconditions:**
-* Order with items exists
-* No ON DELETE CASCADE
-
-**Steps:**
-
-1. Attempt to delete order:
-
-   ```sql
-   DELETE FROM orders WHERE order_id = <order_id>;
-   ```
-3. Delete items:
-
-   ```sql
-   DELETE FROM order_items WHERE order_id = <order_id>;
-   ```
-4. Delete the order again:
-
-   ```sql
-   DELETE FROM orders WHERE order_id = <order_id>;
-   ```
-
-**Expected Result:**
-
-* FK prevents initial delete
-* Order deleted after items removed
-
-
-### **TC_ORD_NEG_14 — NEGATIVE: Invalid Order Status**
+### **TC_ORD_NEG_11 — NEGATIVE: Invalid Order Status**
 
 **Priority:** High  
 
@@ -408,10 +323,8 @@ Verify that the system **rejects updates to the `orders.status` field with inval
 
 **Test Data**
 
-| Field      | Invalid Value      |
-|------------|-----------------|
-| status     | FlyingToMars    |
-| order_id   | 1               |
+* status    -  FlyingToMars    
+* order_id  - 1               
 
 **Steps**
 1. Select the target database:
@@ -433,15 +346,15 @@ WHERE order_id = 1;
 SELECT status FROM orders WHERE order_id = 1;
 ```
 **Expected Result**
-* The database rejects the invalid update.
-* Status remains unchanged (e.g., Pending, Paid, Shipped, or Cancelled).
-* An error message may indicate: "Invalid value for column 'status'" or similar.
+* If database constraints or business logic exist, the update is rejected.
+* If status is updated successfully, this is logged as a BUG (missing validation).
+* Status should remain unchanged in a correctly implemented system.
 
 
 ## PAYMENTS
 
 
-### **TC_PAY_15 - CREATE: Add Payment**
+### **TC_PAY_12 - CREATE: Add Payment**
 
 **Priority:** High  
 
@@ -479,7 +392,7 @@ SELECT * FROM payments WHERE order_id = 1 ORDER BY payment_id DESC LIMIT 1;
 * All inserted values match the test data.
 
 
-### **TC_PAY_16 — READ: Verify Payment Amount & Status**
+### **TC_PAY_13 — READ: Verify Payment Amount & Status**
 
 **Priority:** High
 
@@ -505,71 +418,9 @@ WHERE order_id = 1;
 * status = 'Paid'.
 * method = 'Credit Card'.
 * payment_date is correctly populated.
-  
 
-### **TC_PAY_17 - UPDATE: Change Payment Status (Paid → Refunded)**
 
-**Priority:**  High
-
-**Objective**
-* Verify that the payment status can be updated from 'Paid' to 'Refunded'.
-
-**Test Data**
-* payment_id = 1
-* new status = 'Refunded'
-  
-**Steps:**
-1. Retrieve the current status:
-```
-SELECT status FROM payments WHERE payment_id = 1;
-```
-2. Update the payment status:
-```
-UPDATE payments
-SET status = 'Refunded'
-WHERE payment_id = 1;
-```
-3. Verify the update:
-```
-SELECT status FROM payments WHERE payment_id = 1;
-```
-
-**Expected Result**
-* status is successfully updated to 'Refunded'.
-* Only one row affected.
-
-### **TC_PAY_NEG_18 — NEGATIVE: Insert Payment for Non-existing Order**
-
-**Priority:**  High
-
-**Preconditions**
-* payments table exists
-* orders table exists
-* User has INSERT permissions on payments
-  
-**Test Data**
-* order_id = 9999 (non-existent)
-* amount = 100.00
-* method = 'Credit Card'
-* status = 'Paid'
-  
-**Steps:**
-1. Attempt to insert payment for invalid order:
-```
-INSERT INTO payments (order_id, amount, method, status)
-VALUES (9999, 100.00, 'Credit Card', 'Paid');
-```
-2. Verify if the row was inserted:
-```
-SELECT * FROM payments WHERE order_id = 9999;
-```
-
-**Expected Result**
-* Foreign key constraint prevents insert:
-* Cannot add or update a child row: a foreign key constraint fails.
-* No new row is added.
-
-### **TC_PAY_NEG_19 — NEGATIVE: Insert Payment with Negative Amount**
+### **TC_PAY_NEG_14 — NEGATIVE: Insert Payment with Negative Amount**
 
 **Priority:** High
 
@@ -589,7 +440,7 @@ SELECT * FROM payments WHERE order_id = 9999;
 * status = 'Paid'
   
 **Steps:**
-1. Attempt to insert payment with negative amount:
+1. Attempt to insert a payment with negative amount:
 ```
 INSERT INTO payments (order_id, amount, method, status)
 VALUES (1, -20.00, 'Credit Card', 'Paid');
@@ -600,7 +451,7 @@ SELECT * FROM payments WHERE amount < 0;
 ```
 
 **Expected Result**
-* Insert is rejected by database or API/business logic.
+* Insert is rejected by database constraints or business logic validation.
 * No new row with negative amount exists.
 
   
