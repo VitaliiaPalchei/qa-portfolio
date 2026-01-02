@@ -21,14 +21,7 @@ The goal is to highlight my ability to write test cases, execute tests, report b
 * [Test Plan](1_Test_Plan.md) – Testing strategy and approach
 * [Acceptance Criteria](2_Acceptance_Criteria.md) – Requirements mapped for QA verification
 * [Manual Testing](3_Manual_Testing/) – Test cases and bug reports
-  * [Test Cases](3_Manual_Testing/Test_Cases/) – User Registration, Login, Product Browsing, PDP, Cart, Wishlist, Cross-browser, Accessibility
-  * [Bug Reports](3_Manual_Testing/Bug_Reports/) – Documented defects found during testing
-  * [Screenshots](3_Manual_Testing/Screenshots/) – Evidence for test execution
-  * [TestRail Screenshots](3_Manual_Testing/TestRail/) – Screenshots showing test case runs
 * [API Testing](4_API_Testing/) – API endpoints tested with JSON requests/responses
-  * [API Test Cases](4_API_Testing/API_Test_Cases.md)
-  * [Postman Screenshots](4_API_Testing/Postman_Screenshots/)
-  * [Postman JSON Collection](4_API_Testing/Postman_JSON_collection.md)
 * [SQL Testing](5_SQL_Testing/) – SQL queries executed and verified against expected results
 
 ## Tools Used
